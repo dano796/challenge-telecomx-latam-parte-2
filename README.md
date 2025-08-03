@@ -83,7 +83,7 @@ git clone https://github.com/dano796/challenge-telecomx-latam-parte-2.git
 
 **2. Abrir el archivo .ipynb en Google Colab.**
 
-**3. Cargar el dataset procesado (data/datos_procesados.csv)**
+**3. Cargar el dataset procesado** (data/datos_tratados.csv)
 
 ---
 
