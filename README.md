@@ -10,11 +10,9 @@ El objetivo principal es **predecir la cancelación (churn)** de clientes con ba
 
 ## Estructura del proyecto
 
-## Estructura del Proyecto
-
 - **Cuaderno Principal**: `challenge-telecomx-latam-parte-2.ipynb` (accesible a través de Google Colab para ejecución interactiva).
 - **Datos Procesados**: `data/datos_procesados.csv` (conjunto de datos preprocesado listo para el análisis).
-- **Visualizaciones**: Carpeta `images/` que contiene los gráficos generados durante el Análisis Exploratorio de Datos (EDA) y el proceso de modelado.
+- **Visualizaciones**: Carpeta `images/` con gráficos generados durante el proceso de modelado.
 
 ## Modelos Aplicados
 
@@ -31,21 +29,17 @@ Los modelos fueron comparados en términos de: **accuracy**, **precision**, **re
 
 - **Distribución de la variable objetivo (`has_churned`)** y su relación con otras variables.
 - **Análisis de variables numéricas y categóricas** mediante boxplots y gráficos de barras.
-- **Correlaciones con `has_churned`:**
+- **Correlaciones con `has_churned`**
 
 ### 🔎 Selección e Interpretación de Variables
 
-- **Random Forest:**
+- **Random Forest:** Se evaluó la importancia de cada variable usando `.feature_importances_` y se identificaron las 15 variables más relevantes para la predicción.
 
-  - Se evaluó la importancia de cada variable usando `.feature_importances_`.
-  - Se identificaron las 15 variables más relevantes para la predicción.
-  - **Gráfico**:  
-    ![Top 15 Variables - Random Forest](images/importancia_variables_rf.png)
+![Top 15 Variables - Random Forest](images/importancia_variables_rf.png)
 
-- **Regresión Logística:**
-  - Se analizaron los coeficientes del modelo optimizado para identificar variables protectoras y de riesgo.
-  - **Gráfico**:  
-    ![Top 15 Coeficientes - Regresión Logística](images/coeficientes_lr.png)
+- **Regresión Logística:** Se analizaron los coeficientes del modelo para identificar variables protectoras y de riesgo.
+
+![Top 15 Coeficientes - Regresión Logística](images/coeficientes_lr.png)
 
 ### 🤖 Comparación de Modelos
 
@@ -61,9 +55,10 @@ Los modelos fueron comparados en términos de: **accuracy**, **precision**, **re
 | KNN                           | 0.6711   | 0.4389    | 0.8574 | 0.5806   |
 
 - **Métrica Principal:** F1-score
+
 - **Mejor Modelo:** Optimized Logistic Regression (F1 = 0.6223), balanceando precisión y sensibilidad.
-- **Gráfico**:  
-  ![Comparación de Modelos - F1 Score](images/comparacion_modelos.png)
+
+![Comparación de Modelos - F1 Score](images/comparacion_modelos.png)
 
 ### 💡 Insights generados
 
