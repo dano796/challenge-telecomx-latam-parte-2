@@ -8,6 +8,14 @@ Este proyecto forma parte del **Challenge de la Formación: Estadísticas y Mach
 
 El objetivo principal es **predecir la cancelación (churn)** de clientes con base en sus características demográficas, de contrato y uso de servicios. A partir de esto, se busca **identificar los factores clave que explican la baja fidelización de los clientes** y **proporcionar recomendaciones estratégicas** para mejorar la retención.
 
+## Estructura del proyecto
+
+## Estructura del Proyecto
+
+- **Cuaderno Principal**: `challenge-telecomx-latam-parte-2.ipynb` (accesible a través de Google Colab para ejecución interactiva).
+- **Datos Procesados**: `data/datos_procesados.csv` (conjunto de datos preprocesado listo para el análisis).
+- **Visualizaciones**: Carpeta `images/` que contiene los gráficos generados durante el Análisis Exploratorio de Datos (EDA) y el proceso de modelado.
+
 ## Modelos Aplicados
 
 - **Árbol de Decisión**
@@ -19,36 +27,43 @@ Los modelos fueron comparados en términos de: **accuracy**, **precision**, **re
 
 ## Análisis Realizados
 
-### 📊 Análisis exploratorio
+### 📊 Análisis Exploratorio
 
 - **Distribución de la variable objetivo (`has_churned`)** y su relación con otras variables.
 - **Análisis de variables numéricas y categóricas** mediante boxplots y gráficos de barras.
 - **Correlaciones con `has_churned`:**
 
-### 🔎 Selección e interpretación de variables
+### 🔎 Selección e Interpretación de Variables
 
 - **Random Forest:**
 
   - Se evaluó la importancia de cada variable usando `.feature_importances_`.
   - Se identificaron las 15 variables más relevantes para la predicción.
+  - **Gráfico**:  
+    ![Top 15 Variables - Random Forest](images/importancia_variables_rf.png)
 
 - **Regresión Logística:**
   - Se analizaron los coeficientes del modelo optimizado para identificar variables protectoras y de riesgo.
+  - **Gráfico**:  
+    ![Top 15 Coeficientes - Regresión Logística](images/coeficientes_lr.png)
 
-### 🤖 Comparación de modelos
+### 🤖 Comparación de Modelos
 
-- **Modelos Evaluados:**
+- **Modelos evaluados** con las métricas **accuracy**, **precision**, **recall** y **F1-score**:
 
-  - Decision Tree
-  - Random Forest
-  - Optimized Random Forest
-  - KNN
-  - Logistic Regression
-  - Optimized Logistic Regression
+| Model                         | Accuracy | Precision | Recall | F1-score |
+| ----------------------------- | -------- | --------- | ------ | -------- |
+| Optimized Logistic Regression | 0.7288   | 0.4937    | 0.8414 | 0.6223   |
+| Logistic Regression           | 0.7189   | 0.4834    | 0.8538 | 0.6173   |
+| Optimized Random Forest       | 0.7217   | 0.4860    | 0.8342 | 0.6142   |
+| Random Forest                 | 0.7018   | 0.4675    | 0.8841 | 0.6116   |
+| Decision Tree                 | 0.6990   | 0.4614    | 0.7986 | 0.5849   |
+| KNN                           | 0.6711   | 0.4389    | 0.8574 | 0.5806   |
 
 - **Métrica Principal:** F1-score
-
 - **Mejor Modelo:** Optimized Logistic Regression (F1 = 0.6223), balanceando precisión y sensibilidad.
+- **Gráfico**:  
+  ![Comparación de Modelos - F1 Score](images/comparacion_modelos.png)
 
 ### 💡 Insights generados
 
