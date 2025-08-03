@@ -10,9 +10,9 @@ El objetivo principal es **predecir la cancelación (churn)** de clientes con ba
 
 ## Estructura del proyecto
 
-- **Cuaderno Principal**: `challenge-telecomx-latam-parte-2.ipynb` (accesible a través de Google Colab para ejecución interactiva).
+- **Cuaderno Principal**: `Challenge_TelecomX_LATAM_Parte_2_Daniel_Ortiz_Aristizábal.ipynb` (accesible a través de Google Colab para su ejecución).
 - **Datos Procesados**: `data/datos_procesados.csv` (conjunto de datos preprocesado listo para el análisis).
-- **Visualizaciones**: Carpeta `images/` con gráficos generados durante el proceso de modelado.
+- **Visualizaciones**: Carpeta `images/` con gráficos generados durante el modelado.
 
 ## Modelos Aplicados
 
