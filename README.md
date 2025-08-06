@@ -43,7 +43,7 @@ Los modelos fueron comparados en términos de: **accuracy**, **precision**, **re
 
 ### 🤖 Comparación de Modelos
 
-- **Modelos evaluados** con las métricas **accuracy**, **precision**, **recall** y **F1-score**:
+- **Modelos evaluados:**
 
 | Model                         | Accuracy | Precision | Recall | F1-score |
 | ----------------------------- | -------- | --------- | ------ | -------- |
